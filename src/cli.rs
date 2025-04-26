@@ -3,6 +3,10 @@ use clap::Parser;
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 pub struct Args {
+    /// The address of the socket in which to send data data to. This should follow the form
+    /// '127.0.0.1:51276'
+    pub socket_addr: String,
+
     /// The pokemon to display, use "random" to get a random pokemon
     pub pokemon: Vec<String>,
 
